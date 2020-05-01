@@ -3,54 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
     <title>Finman</title>
 </head>
 <body>
-   <div class="grid">
-<div class="box">
-  <div class="header">    
-      <h1 class="title">finman</h1>
+    <nav class="navbar navbar-dark bg-dark">
+        <h3>Finman</h3>
+      </nav>
+   <div class="main-container ">
+       <div class="box input-data">
+            <div class="flex-col">
+                <div class="form-inline m-1">
+                  <select class="custom-select  select" id="inlineFormCustomSelect">
+                        <option>Income</option>
+                        <option>Expense</option>
+                  </select>
+                  <input type="text" placeholder="Amount" class="form-control input-amount m-1 ">
+ 
+                </div>
+                <input type="text" placeholder="Description" class="form-control m-1">
+                <button class=" btn btn-dark m-1">Add</button>
+            </div>
+          
+                 
+            </div> 
+          
 
-      <div class="input-data">
-          <select>
-              <option>Income</option>
-              <option>Expense</option>
-          </select>
-          <input type="text" placeholder="Amount" class="inputamount">
-          <input type="text" placeholder="Description" class="inputtext">
-     <button>Add</button>
-        </div>
+    
 
-        <div class="amount-data">
-<div>
-    <h1 class="data-box">200</h1>
-    <p class="data-box desc">Income</p>
-
-</div>
-<div>
-    <h1 class="data-box">200</h1>
-    <p class="data-box desc">Expenses</p>
-
-</div>
-<div >
-    <h1 class="data-box">200</h1>
-    <p class="data-box desc">Balance</p>
-
-</div>
+        <div class="box box-lg mt-4">
+<h5 class="center">Income</h5>
 
         </div>
-  </div> 
-</div>
+        <div class="box box-lg mt-4">
+<h5>Expenses</h5>
+
+        </div>
+      
+    
+
+   </div>
 
 
+
+
+<!-- 
 <div class="box grid2">
-<div class="box2"></div>
-<div class="box2"></div>
+<div class=""></div>
+<div class=""></div>
 
 
 </div>
-   </div> 
+   </div>  -->
 
 
 
@@ -164,4 +170,7 @@
         </div> -->
 </body>
 <script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </html>
