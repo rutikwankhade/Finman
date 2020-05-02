@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="style.css">
 
     <title>Finman</title>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <h3>Finman</h3>
+        <div class="form-inline"><img src="icons/expenses.png" class="icon mr-1"><h3>Finman</h3></div>
       </nav>
    <div class="main-container ">
        <div class="box input-data">
             <div class="flex-col">
                 <div class="form-inline m-1">
-                  <select class="custom-select  select" id="inlineFormCustomSelect">
+                  <select class="custom-select  select m-1" id="inlineFormCustomSelect">
                         <option>Income</option>
                         <option>Expense</option>
                   </select>
@@ -35,11 +37,32 @@
 
         <div class="box box-lg mt-4">
 <h5 class="center">Income</h5>
+<ul class="list-group">
+    <li class="list-group-item">
+        <div class="item__description">Sold car</div>
+        <div class="right clearfix">
+            <div class="item__value">+ 1,500.00</div>
+            <div class="item__delete">
+                <i class="fa fa-trash right" aria-hidden="true"></i>
 
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Morbi leo risus</li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
         </div>
         <div class="box box-lg mt-4">
 <h5>Expenses</h5>
-
+<ul class="list-group">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Morbi leo risus</li>
+    <li class="list-group-item">Porta ac consectetur ac</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
         </div>
       
     

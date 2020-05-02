@@ -1,5 +1,5 @@
 body{margin:0px;
-    background-color: #f2f2f2;
+    background-color: #796dce;
 padding:0px;}
 .title{height:50px;
     color:#ffffff;
@@ -14,11 +14,15 @@ background-color:#f2f434;}
     margin-top:50px;
 
 }
+.icon{width:50px;
+height:50px;
+}
 .input-amount{width:100px;}
 
     
 .input-data{align-items: center;
-justify-content: center;}
+justify-content: center;
+height:230px;}
 
 .flex-col{display:flex;
 flex-direction: column;}
@@ -28,7 +32,8 @@ flex-direction: column;}
 .box{background-color: #ffffff;
 margin:20px;
 padding:20px;
-width:320px;}
+width:320px;
+border-radius:4px;}
 
 
 .box-lg{width:400px;}

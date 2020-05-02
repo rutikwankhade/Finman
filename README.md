@@ -1,1 +1,1 @@
-# Finman
+# :receipt: Finman
