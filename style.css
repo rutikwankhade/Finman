@@ -47,9 +47,9 @@ flex-direction: row;}
 .card-sm{background-color: #ffffff;
 color:#796dce;
 margin:20px; 
-height:100px;
+height:auto;
 width:150px;
-
+padding:10px;
 border-radius: 4px;
 box-shadow: 4px 4px 2px #e6e6e6;
 text-align: center;
@@ -76,7 +76,8 @@ margin-top:50px;}
 .box-lg{width:320px;
     margin-top:25px;
 }
-     .box{margin:auto;} 
+     .box{margin:auto;
+    height:auto;} 
 
      .sidebar {
         width: 100%;
@@ -86,10 +87,10 @@ margin-top:50px;}
         }
         .content{margin:auto;}
         .card-sm{margin:10px;
-    
     width:130px;}
         .flex-row{width:300px;
         flex-wrap: wrap;
     margin:auto;
 justify-content: center;}
+h1{    font-size: 30px;}
 }
