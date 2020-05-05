@@ -1,1 +1,1 @@
-# :receipt: Finman
+# <img src="https://github.com/rutikwankhade/Finman/blob/master/icons/expenses.png" width="50px" height="50px"> Finman

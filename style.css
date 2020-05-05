@@ -47,8 +47,9 @@ flex-direction: row;}
 .card-sm{background-color: #ffffff;
 color:#796dce;
 margin:20px; 
-height:auto;
+height:100px;
 width:150px;
+
 border-radius: 4px;
 box-shadow: 4px 4px 2px #e6e6e6;
 text-align: center;
@@ -81,6 +82,7 @@ margin-top:50px;}
         width: 100%;
         height: auto;
         position: relative;
+        padding:20px;
         }
         .content{margin:auto;}
         .card-sm{margin:10px;
