@@ -18,15 +18,15 @@
         <div class="box input-data">
              <div class="flex-col">
                  <div class="form-inline m-1">
-                   <select class="custom-select  select m-1" id="inlineFormCustomSelect">
-                         <option>Income</option>
-                         <option>Expense</option>
+                   <select class="custom-select  select m-1 add-type" id="inlineFormCustomSelect">
+                         <option value="inc">Income</option>
+                         <option value="exp">Expense</option>
                    </select>
-                   <input type="text" placeholder="Amount" class="form-control input-amount m-1 ">
+                   <input type="text" placeholder="Amount" class="form-control input-amount m-1 add-value">
   
                  </div>
-                 <input type="text" placeholder="Description" class="form-control m-1">
-                 <button class=" btn btn-dark m-1">Add</button>
+                 <input type="text" placeholder="Description" class="form-control m-1 add-description">
+                 <button class=" btn btn-dark m-1 add-btn">Add</button>
              </div>
            
                   
@@ -55,6 +55,20 @@
         
         
     </li>
+
+    <li class="mb-2 list-group-item d-flex justify-content-between">
+        <div class="d-flex flex-column"> home
+       <small class="text-muted">date</small>
+        </div> 
+        <div>
+        <span class="px-5">500</span>
+        <button type="button" class="btn btn-sm mr-2" >
+        <i class="fa fa-trash" aria-hidden="true"></i>
+        </button>
+  
+        </div> 
+        
+          </li>
     <li class="list-group-item ">Dapibus ac facilisis in</li>
     <li class="list-group-item ">Morbi leo risus</li>
     <li class="list-group-item">Porta ac consectetur ac</li>
@@ -77,7 +91,7 @@
    </div>
 </div>
 
-   <footer class="bottom">hjf</footer>
+   <footer class="bottom">Made with &#10084; By Rutik Wankhade</footer>
 <!-- 
 <div class="box grid2">
 <div class=""></div>

@@ -62,10 +62,12 @@ border-radius:4px;}
 
 footer{height:40px;
 text-align: center;
-color:#f2f2f2;
-margin-top:50px;}
+background-color:#ffffff;
+margin-top:50px;
+padding:5px;}
 .box-lg{width:400px;}
-
+p{color:#ff1a8c;
+font-size: 18px;}
 .fa-trash{font-size: 25px;}
 .item__description{float:left;}
 @media only screen and (max-width:600px){
