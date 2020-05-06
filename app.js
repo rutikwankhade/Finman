@@ -88,7 +88,7 @@ var UIController = (function(){
             html= `<li class=" list-group-item d-flex justify-content-between"id=${obj.Id} >
                 <div class="d-flex flex-column">${obj.description}</div> 
                 <div>
-                   <span class="px-5">${obj.value}</span>
+                   <span class="px-5">${obj.value} &#8377;</span>
                    <button type="button" class="btn btn-sm mr-1" >
                      <i class="fa fa-trash" aria-hidden="true"></i>
                    </button>
@@ -106,6 +106,19 @@ var UIController = (function(){
 
             //insert html into DOM
             document.querySelector(element).insertAdjacentHTML('beforeend',html)
+         },
+
+         clearFields:function(){
+             var fields, fieldsArr;
+             fields=document.querySelectorAll('input');
+             fieldsArr=Array.prototype.slice.call(fields);
+             fieldsArr.forEach(function(current){
+                current.value="";
+                fieldsArr[0].focus();
+             })
+                
+                 
+        
          },
 
          getDOMstrings:function(){
@@ -142,6 +155,9 @@ var controller = (function(budgetCtrl,UIctrl){
               newItem = budgetCtrl.addItem(input.type, input.description, input.value);
         //3. add item to ui
              UIctrl.addListItem(newItem,input.type);
+
+        //clear the fields
+        UIctrl.clearFields();     
         //4. calculate the budget
 
         //5. display budget on ui
