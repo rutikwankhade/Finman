@@ -66,7 +66,10 @@ var UIController = (function(){
          inputType:'.add-type',
          inputDescription:'.add-description',
          inputValue:'.add-value',
-         inputBtn:'.add-btn'
+         inputBtn:'.add-btn',
+         incomeContainer:'.income-list',
+         expenseContainer:'.expense-list'
+
     }
      return {
          getInput:function(){
@@ -77,6 +80,34 @@ var UIController = (function(){
                    };
              
          },
+
+         addListItem:function(obj,type){
+
+            var html;
+            //create html string with placeholder
+            html= `<li class=" list-group-item d-flex justify-content-between"id=${obj.Id} >
+                <div class="d-flex flex-column">${obj.description}</div> 
+                <div>
+                   <span class="px-5">${obj.value}</span>
+                   <button type="button" class="btn btn-sm mr-1" >
+                     <i class="fa fa-trash" aria-hidden="true"></i>
+                   </button>
+                </div> 
+               </li>`;
+            
+               if(type==='inc'){
+                 element=DOMstrings.incomeContainer;
+                }else if(type==='exp'){
+                 element=DOMstrings.expenseContainer;
+                }
+          
+        
+            //replace placeholder with actual data
+
+            //insert html into DOM
+            document.querySelector(element).insertAdjacentHTML('beforeend',html)
+         },
+
          getDOMstrings:function(){
              return DOMstrings;
          }
@@ -110,7 +141,7 @@ var controller = (function(budgetCtrl,UIctrl){
         //2. add the item to budget controller
               newItem = budgetCtrl.addItem(input.type, input.description, input.value);
         //3. add item to ui
-
+             UIctrl.addListItem(newItem,input.type);
         //4. calculate the budget
 
         //5. display budget on ui
