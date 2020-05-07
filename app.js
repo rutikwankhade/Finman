@@ -56,6 +56,20 @@ var budgetController= (function(){
                    return newItem;
                },
 
+               deleteItem:function(type,id){
+
+                var ids, index;
+                ids=data.allItems[type].map(function(current){
+
+                    return current.id;
+
+                });
+                index=ids.indexOf(id);
+                if(index !== -1){
+                    data.allItems[type].splice(index, 1);
+                }
+               },
+
                calculateBudget:function(){
 
                 //calculate total income and expenses
@@ -95,7 +109,8 @@ var UIController = (function(){
          expenseContainer:'.expense-list',
          balanceLabel:'.total-balance',
          incomeLabel:'.total-income',
-         expenseLabel:'.total-expense'
+         expenseLabel:'.total-expense',
+         container:'.main-container'
 
     }
      return {
@@ -112,8 +127,8 @@ var UIController = (function(){
 
             var html;
             //create html string with placeholder
-            html= `<li class=" list-group-item d-flex justify-content-between"id=${obj.Id} >
-                <div class="d-flex flex-column">${obj.description}</div> 
+            html= `<li class=" list-group-item d-flex justify-content-between" id="${type +"-"+ obj.id}">
+                <div class="d-flex flex-column des">${obj.description}</div> 
                 <div>
                    <span class="px-5">${obj.value} &#8377;</span>
                    <button type="button" class="btn btn-sm mr-1" >
@@ -133,6 +148,11 @@ var UIController = (function(){
 
             //insert html into DOM
             document.querySelector(element).insertAdjacentHTML('beforeend',html)
+         },
+         deleteListItem:function(selectorID){
+
+           var el= document.getElementById(selectorID);
+           el.parentNode.removeChild(el);
          },
 
          clearFields:function(){
@@ -175,6 +195,7 @@ var controller = (function(budgetCtrl,UIctrl){
                      ctrlAddItem();
             }
         });
+        document.querySelector(DOM.container).addEventListener('click',ctrlDeleteItem);
     };
     
     var updateBudget=function(){
@@ -207,6 +228,23 @@ var controller = (function(budgetCtrl,UIctrl){
            
        
     }
+
+    var ctrlDeleteItem=function(event){
+
+        var itemId,splitId,type,ID;
+        itemId=event.target.parentNode.parentNode.parentNode.id;
+        if(itemId){
+            splitId=itemId.split("-");
+            type=splitId[0];
+            ID=parseInt(splitId[1]);
+            //1. delete the item from data structure
+               budgetCtrl.deleteItem(type,ID);
+            //2. delete the item from ui
+            UIctrl.deleteListItem(itemId);
+            //3. update budget
+             updateBudget();
+        }
+    };
    
    //made it a public function by returning
     return {
