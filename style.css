@@ -66,7 +66,8 @@ footer{
     text-align: center;
     background-color:#ffffff;
     margin-top:50px;
-    padding:5px;
+    padding:10px;
+    font-size: 14px;
 }
 .box-lg{width:400px;}
 p{
@@ -77,6 +78,7 @@ p{
 .item__description{float:left;}
 span{color:#ff1a8c;}
 .des{color:#796dce;}
+h1{font-size: 30px;}
 
 /*Media queries */
 
@@ -108,5 +110,4 @@ span{color:#ff1a8c;}
         margin:auto;
         justify-content: center;
     }
-    h1{font-size: 30px;}
 }
