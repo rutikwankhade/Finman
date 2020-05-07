@@ -19,6 +19,7 @@ var budgetController= (function(){
         });
         data.totals[type]=sum;
     }
+
     var data={
               allItems:{
               exp:[],
@@ -87,6 +88,7 @@ var budgetController= (function(){
                    }
                },
 
+              
                testing:function(){
                    console.log(data);
                }
@@ -128,10 +130,11 @@ var UIController = (function(){
             var html;
             //create html string with placeholder
             html= `<li class=" list-group-item d-flex justify-content-between" id="${type +"-"+ obj.id}">
-                <div class="d-flex flex-column des">${obj.description}</div> 
+                <div class="d-flex flex-column des">${obj.description}
+                </div> 
                 <div>
                    <span class="px-5">${obj.value} &#8377;</span>
-                   <button type="button" class="btn btn-sm mr-1" >
+                   <button type="button" class="btn btn-sm " >
                      <i class="fa fa-trash" aria-hidden="true"></i>
                    </button>
                 </div> 
