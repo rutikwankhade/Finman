@@ -1,6 +1,13 @@
-# :chart: Finman
+# Finman
 
- Finance manager to manage all your income and expenses
- See [live](https://finman.now.sh);
+ Finance manager to manage all your income and expenses.
 
- <img src="https://github.com/rutikwankhade/Finman/blob/master/icons/finman.png" width="900px" height="450">
+Built with 
+- html
+- CSS
+- bootstrap
+- JavaScript
+
+###  See [live](https://finman.now.sh);
+
+
