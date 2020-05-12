@@ -31,7 +31,7 @@ var budgetController= (function(){
             },
             balance:0
            }
-   
+  localStorage.setItem('data',JSON.stringify(data)); 
            return {
                addItem:function(type,desc,val){
                    var newItem,ID;
