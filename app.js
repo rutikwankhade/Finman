@@ -47,7 +47,7 @@ var budgetController= (function(){
                    //create new item based on type 'inc' or 'exp'
                    if(type==='exp'){
                        newItem= new Expense(ID,desc,val);
-                   }else if(typep="inc"){
+                   }else if(type==="inc"){
                        newItem=new Income(ID,desc,val);
                    }
                    //because of same name of array and type, it will choose in which array to apush
