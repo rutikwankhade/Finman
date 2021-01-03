@@ -114,7 +114,7 @@ h1{font-size: 30px;}
 
 /* media query for tab version */
 
-@media (min-width:600px) and (max-width:1080px){
+@media (min-width:600px) and (max-width:960px){
 
     .main-container{flex-direction: column;}
     .box-lg{
@@ -141,5 +141,17 @@ h1{font-size: 30px;}
         flex-wrap: wrap;
         margin:auto;
         justify-content: center;
+    }
+}
+ /*making stable of footer for fix media */
+@media (min-width:960px){
+    footer{
+        height:40px;
+        text-align: center;
+        background-color:#ffffff;
+        margin-top:250px;
+        padding:10px;
+        font-size: 14px;
+        margin-left: 300px;
     }
 }
